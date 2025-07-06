@@ -1,91 +1,43 @@
-Real-Time ECG Arrhythmia Classification Using a Transformer Model
+# ECG Classifier
 
-Overview
+Welcome to the **ECG Classifier** repository! 🚀
 
-The detection of arrhythmias in ECG signals is crucial for diagnosing and preventing cardiac conditions. ECG signals provide valuable insights into heart function, and abnormalities in these signals can indicate life-threatening arrhythmias. This project aims to develop a deep learning model based on a transformer architecture to classify ECG signals in real-time.
+This project aims to provide a powerful, user-friendly, and efficient solution for classifying Electrocardiogram (ECG) signals. Using modern machine learning techniques and interactive Jupyter Notebooks, this repository is designed for researchers, data scientists, and enthusiasts interested in biomedical signal processing and cardiac health.
 
-Dataset Details
+## 🌟 Features
 
-MIT-BIH Arrhythmia Database
+- **Comprehensive Notebooks**: Step-by-step Jupyter Notebooks covering data preprocessing, model training, evaluation, and visualization.
+- **State-of-the-art Algorithms**: Implements robust machine learning and deep learning models tailored for ECG data.
+- **Easy to Use**: Modular code structure and clear documentation to help you get started quickly.
+- **Extendable**: Easily adapt the pipeline for your own ECG datasets or other time-series classification tasks.
 
-The MIT-BIH Arrhythmia Database is used for training and evaluation. This dataset consists of 48 half-hour ECG recordings from 47 individuals (25 male, 22 female) and was collected from the Beth Israel Hospital Arrhythmia Laboratory. The signals were sampled at 360 Hz with a resolution of 11 bits per sample.
+## 🚀 Getting Started
 
-Preprocessing Steps
+### Prerequisites
 
-Loading ECG Signals: Extracted from the MIT-BIH dataset using wfdb and segmented into beats.
+- Python 3.7+
+- Jupyter Notebook
+- Recommended packages: `numpy`, `pandas`, `matplotlib`, `scikit-learn`, `tensorflow` or `pytorch`
 
-Normalization: Standardized ECG signals using Z-score normalization to ensure consistency.
+You can install the requirements using pip:
 
-R-Peak Detection: Detected using the annotations provided in MIT-BIH.
+```bash
+pip install -r requirements.txt
+```
 
-Windowing: Each heartbeat is extracted into 100-sample windows around R-peaks.
+### Usage
 
-Label Encoding: Arrhythmia labels are mapped to categorical values.
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/Mugundankalyan/ecg_classifier.git
+    cd ecg_classifier
+    ```
 
-Data Augmentation: Synthetic noise and random shifts are added to improve model generalization.
+2. **Open the Jupyter Notebook:**
+    ```bash
+    jupyter notebook
+    ```
+    Navigate to the desired notebook and start exploring!
 
-The dataset was split into 70% training, 15% validation, and 15% testing.
+3. **Run the code cells** to process the data, train models, and visualize results.
 
-Model Design
-
-The model is a transformer-based neural network, designed for sequential ECG data processing. Unlike traditional CNN or LSTM models, transformers capture long-range dependencies effectively.
-
-Key Components
-
-Input Layer: Accepts ECG sequences of shape (100,1).
-
-Positional Encoding: Adds time-step information to account for sequence order.
-
-Transformer Encoder Layers:
-
-Multi-head self-attention to capture dependencies between time steps.
-
-Feedforward layers with ReLU activation.
-
-Layer normalization & dropout for stability and regularization.
-
-Flatten Layer: Converts sequence output into a dense representation.
-
-Fully Connected Layers:
-
-Dense (64 neurons, ReLU activation)
-
-Dropout (0.5) to prevent overfitting
-
-Dense (5 output classes, softmax activation)
-
-Training Parameters
-
-Batch Size: 32
-
-Epochs: 20
-
-Dropout Rate: 0.5
-
-Optimizer: Adam
-
-Loss Function: Categorical Cross-Entropy
-
-Confusion Matrix Analysis
-
-High precision and recall for normal beats (N).
-
-Minor misclassifications between PVC and APC due to waveform similarity.
-
-LBBB and RBBB were well classified with high accuracy.
-
-Testing and Inference
-
-The trained model is deployed to classify real-time ECG data. The inference process involves:
-
-Retrieving ECG sequences from Firebase.
-
-Preprocessing the signals (normalization, segmentation).
-
-Feeding data into the transformer model for classification.
-
-Observations
-
-Some APC beats were misclassified as Normal, possibly due to similar waveform morphology.
-
-PVC predictions were highly accurate, demonstrating the model’s robustness.
