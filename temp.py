@@ -103,15 +103,15 @@ def detect_abnormalities(bpm, spo2, sbp, dbp, classification_result):
 
 if not firebase_admin._apps:
     try:
-        cred = credentials.Certificate(os.getenv("FIREBASE_CREDENTIALS_PATH", "rt-ecg-12-firebase-adminsdk-fbsvc-a2f427dc4d.json"))
+        cred = credentials.Certificate(os.getenv("FIREBASE_CREDENTIALS_PATH", "PATH TO JSON FILE"))
         firebase_admin.initialize_app(cred, {
-            "databaseURL": "https://rt-ecg-12-default-rtdb.asia-southeast1.firebasedatabase.app"
+            "databaseURL": "DatabaseURL"
         })
     except Exception as e:
         st.error(f"Firebase initialization failed: {e}")
         send_telegram_message("Warning: Firebase connection failed!")
 
-USER_ID = "nHUTGVGOCIaa9MemnWn4AchbWGG2"
+USER_ID = "USER_ID"
 
 def clear_old_ecg_data():
     try:
