@@ -30,9 +30,7 @@ The **Assistance System for Heart Patients** is an intelligent platform designed
 - Python 3.7+
 - pip (Python package manager)
 - Streamlit
-- Required hardware sensors (for live monitoring)
-  ```
-
+- Required hardware sensors (for live monitoring) <ad8232 for ecg signal acquisition and MAX30102
 ## Usage
 
 - Register patients and set up their monitoring devices.
