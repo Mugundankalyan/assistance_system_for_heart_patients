@@ -18,9 +18,8 @@ The **Assistance System for Heart Patients** is an intelligent platform designed
 - Python (core logic)
 - Machine Learning (health data analysis)
 - IoT Device Integration (for sensor data)
-- Web Framework (Flask/Django or similar)
-- Database (SQLite/MySQL/PostgreSQL)
-- Frontend (HTML/CSS/JavaScript/React)
+- Web Framework (Streamlit)
+- Firebase
 - APIs for communication between modules
 
 ## Getting Started
