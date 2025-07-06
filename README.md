@@ -1,43 +1,41 @@
-# ECG Classifier
+# Assistance System for Heart Patients
 
-Welcome to the **ECG Classifier** repository! 🚀
+## Overview
 
-This project aims to provide a powerful, user-friendly, and efficient solution for classifying Electrocardiogram (ECG) signals. Using modern machine learning techniques and interactive Jupyter Notebooks, this repository is designed for researchers, data scientists, and enthusiasts interested in biomedical signal processing and cardiac health.
+The **Assistance System for Heart Patients** is an intelligent platform designed to monitor and support individuals with heart conditions. Leveraging modern technologies, it collects health data, analyzes vital signs, and provides timely alerts and recommendations to both patients and healthcare professionals. The system aims to improve the quality of life and safety for heart patients through continuous monitoring and assistance.
 
-## 🌟 Features
+## Features
 
-- **Comprehensive Notebooks**: Step-by-step Jupyter Notebooks covering data preprocessing, model training, evaluation, and visualization.
-- **State-of-the-art Algorithms**: Implements robust machine learning and deep learning models tailored for ECG data.
-- **Easy to Use**: Modular code structure and clear documentation to help you get started quickly.
-- **Extendable**: Easily adapt the pipeline for your own ECG datasets or other time-series classification tasks.
+- **Real-Time Monitoring:** Continuously tracks vital parameters such as heart rate, ECG, blood pressure, and more.
+- **Alert System:** Notifies patients, caregivers, and medical staff in case of abnormal readings or emergencies.
+- **Data Visualization:** Presents health data trends and statistics through intuitive dashboards.
+- **Patient Records:** Maintains a secure history of patient health data for review and analysis.
+- **Recommendations:** Provides personalized lifestyle and medication reminders based on patient profiles.
+- **Remote Access:** Enables doctors and caregivers to access patient information remotely.
 
-## 🚀 Getting Started
+## Technologies Used
+
+- Python (core logic)
+- Machine Learning (health data analysis)
+- IoT Device Integration (for sensor data)
+- Web Framework (Flask/Django or similar)
+- Database (SQLite/MySQL/PostgreSQL)
+- Frontend (HTML/CSS/JavaScript/React)
+- APIs for communication between modules
+
+## Getting Started
 
 ### Prerequisites
 
 - Python 3.7+
-- Jupyter Notebook
-- Recommended packages: `numpy`, `pandas`, `matplotlib`, `scikit-learn`, `tensorflow` or `pytorch`
+- pip (Python package manager)
+- Streamlit
+- Required hardware sensors (for live monitoring)
+  ```
 
-You can install the requirements using pip:
+## Usage
 
-```bash
-pip install -r requirements.txt
-```
-
-### Usage
-
-1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/Mugundankalyan/ecg_classifier.git
-    cd ecg_classifier
-    ```
-
-2. **Open the Jupyter Notebook:**
-    ```bash
-    jupyter notebook
-    ```
-    Navigate to the desired notebook and start exploring!
-
-3. **Run the code cells** to process the data, train models, and visualize results.
-
+- Register patients and set up their monitoring devices.
+- View real-time health data and historical records on the dashboard.
+- Receive alerts and notifications for abnormal readings.
+- Doctors can log in to review and manage their patients.
