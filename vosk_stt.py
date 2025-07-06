@@ -10,8 +10,8 @@ import sounddevice as sd
 import vosk
 import requests
 from gtts import gTTS
-TELEGRAM_TOKEN = "7782069644:AAGS7JL4aY-1jvG9NLJlyf9btaRx40PBO60"
-CHAT_ID = "1458744191"
+TELEGRAM_TOKEN = "TELEGRAM_BOT_TOKEN"
+CHAT_ID = "USER_ID"
 
 MODEL_PATH = "vosk_model"
 if not os.path.exists(MODEL_PATH):
